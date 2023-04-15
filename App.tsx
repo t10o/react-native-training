@@ -1,11 +1,13 @@
-import { Box, NativeBaseProvider, Text } from 'native-base'
+import { NativeBaseProvider } from 'native-base'
+import { Layout } from './src/components/layouts'
+import { TodoList } from './src/pages/TodoList'
 
 export default function App() {
   return (
     <NativeBaseProvider>
-      <Box flex={1} alignItems="center" justifyContent="center">
-        <Text>Hello React Native</Text>
-      </Box>
+      <Layout>
+        <TodoList />
+      </Layout>
     </NativeBaseProvider>
   )
 }
