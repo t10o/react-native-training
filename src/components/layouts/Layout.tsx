@@ -1,5 +1,6 @@
 import { ScrollView, View, VStack } from 'native-base'
 import { ReactNode } from 'react'
+
 import { Header } from './Header'
 
 interface Props {
