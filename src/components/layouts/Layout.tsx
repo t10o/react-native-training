@@ -1,4 +1,4 @@
-import { ScrollView } from 'native-base'
+import { ScrollView, View, VStack } from 'native-base'
 import { ReactNode } from 'react'
 import { Header } from './Header'
 
@@ -8,10 +8,14 @@ interface Props {
 
 export const Layout = ({ children }: Props): JSX.Element => {
   return (
-    <>
+    <View flex={1}>
       <Header />
 
-      <ScrollView>{children}</ScrollView>
-    </>
+      <ScrollView flexGrow={1}>
+        <VStack px={6} py={5} width="100%">
+          {children}
+        </VStack>
+      </ScrollView>
+    </View>
   )
 }
