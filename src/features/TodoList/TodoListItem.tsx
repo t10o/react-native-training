@@ -11,8 +11,8 @@ export const TodoListItem = ({ label, isFinished }: Props): JSX.Element => {
     <>
       <VStack
         flex={1}
-        justifyContent="space-between"
         flexDirection="row"
+        alignItems="center"
         shadow={3}
         borderRadius="full"
         bg="white"
@@ -20,14 +20,13 @@ export const TodoListItem = ({ label, isFinished }: Props): JSX.Element => {
         px={6}
         mb={5}
       >
-        <Text>{label}</Text>
-
         {isFinished ? (
           <Icon
             size="xl"
             as={MaterialIcons}
             name="check-circle"
             color="green.500"
+            mr={3}
           />
         ) : (
           <Icon
@@ -35,8 +34,11 @@ export const TodoListItem = ({ label, isFinished }: Props): JSX.Element => {
             as={MaterialIcons}
             name="radio-button-unchecked"
             color="blue.500"
+            mr={3}
           />
         )}
+
+        <Text>{label}</Text>
       </VStack>
     </>
   )

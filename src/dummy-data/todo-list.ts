@@ -8,4 +8,8 @@ export const TODO_LIST = [
   { label: 'foo', isFinished: false },
   { label: 'bar', isFinished: false },
   { label: 'baz', isFinished: true },
+  { label: 'qux', isFinished: true },
+  { label: 'quux', isFinished: true },
+  { label: 'corge', isFinished: true },
+  { label: 'grault', isFinished: true },
 ]

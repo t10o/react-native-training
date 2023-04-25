@@ -1,5 +1,5 @@
 import { MaterialIcons } from '@expo/vector-icons'
-import { FlatList, Icon, IconButton } from 'native-base'
+import { Fab, FlatList, Icon } from 'native-base'
 
 import { TODO_LIST } from '../dummy-data/todo-list'
 import { TodoListItem } from '../features/TodoList/TodoListItem'
@@ -14,12 +14,10 @@ export const TodoList = (): JSX.Element => {
         )}
       />
 
-      <IconButton
-        position="absolute"
-        right="50%"
-        bottom={3}
+      <Fab
+        bottom={10}
+        right={7}
         backgroundColor="blue.500"
-        borderRadius="full"
         icon={<Icon size="2xl" as={MaterialIcons} name="add" color="white" />}
       />
     </>
