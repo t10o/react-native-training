@@ -1,14 +1,24 @@
+import 'react-native-gesture-handler'
+
+import { NavigationContainer } from '@react-navigation/native'
+import { createStackNavigator } from '@react-navigation/stack'
 import { NativeBaseProvider } from 'native-base'
 
-import { Layout } from './src/components/layouts'
+import { Todo } from './src/pages/Todo'
 import { TodoList } from './src/pages/TodoList'
 
 export default function App() {
+  const Stack = createStackNavigator()
+
   return (
     <NativeBaseProvider>
-      <Layout>
-        <TodoList />
-      </Layout>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="TodoList" component={TodoList} />
+
+          <Stack.Screen name="Todo" component={Todo} />
+        </Stack.Navigator>
+      </NavigationContainer>
     </NativeBaseProvider>
   )
 }

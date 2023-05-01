@@ -1,12 +1,13 @@
 import { MaterialIcons } from '@expo/vector-icons'
 import { Fab, FlatList, Icon } from 'native-base'
 
+import { Layout } from '../components/layouts'
 import { TODO_LIST } from '../dummy-data/todo-list'
 import { TodoListItem } from '../features/TodoList/TodoListItem'
 
 export const TodoList = (): JSX.Element => {
   return (
-    <>
+    <Layout>
       <FlatList
         data={TODO_LIST}
         renderItem={({ item }) => (
@@ -20,6 +21,6 @@ export const TodoList = (): JSX.Element => {
         backgroundColor="blue.500"
         icon={<Icon size="2xl" as={MaterialIcons} name="add" color="white" />}
       />
-    </>
+    </Layout>
   )
 }
