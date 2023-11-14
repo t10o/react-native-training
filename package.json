@@ -45,6 +45,6 @@
   "private": true,
   "volta": {
     "node": "18.18.2",
-    "yarn": "1.22.20"
+    "yarn": "1.22.21"
   }
 }
